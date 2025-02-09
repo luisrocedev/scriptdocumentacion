@@ -1,0 +1,11 @@
+* Página de gestión de "Quiénes Somos".
+ * 
+ * Este script permite la administración de la sección "Quiénes Somos",
+ * proporcionando opciones para agregar nuevos registros y visualizar los existentes.
+ * 
+ * Proceso:
+ * 1. Se incluye la lógica centralizada del sistema.
+ * 2. Se carga la configuración específica para la sección "quienes_somos".
+ * 3. Se convierte la configuración en variables accesibles.
+ * 4. Se genera una interfaz con un botón para agregar registros y una tabla dinámica.
+ * 5. Se incluyen el header y el footer para mantener la estructura del sitio.

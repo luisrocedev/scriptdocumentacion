@@ -1,0 +1,9 @@
+* Pie de página dinámico.
+ * 
+ * Este script incluye la hoja de estilos del footer y genera el contenido del pie de página.
+ * 
+ * Proceso:
+ * 1. Detecta si la ubicación actual es dentro del panel de administración (`admin`).
+ * 2. Ajusta dinámicamente la ruta de la hoja de estilos (`footer.css`).
+ * 3. Incluye la hoja de estilos con un parámetro `?v=time()` para evitar problemas de caché.
+ * 4. Muestra el contenido del footer con derechos reservados.

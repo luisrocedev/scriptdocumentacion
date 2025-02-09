@@ -1,0 +1,18 @@
+* Listar registros de una tabla en la base de datos.
+ * 
+ * Este script permite listar todos los registros de una tabla específica,
+ * proporcionando opciones para editar o eliminar cada registro.
+ * 
+ * Proceso:
+ * 1. Se inicia la sesión y se verifica la autenticación del usuario.
+ * 2. Se incluye la conexión a la base de datos.
+ * 3. Se validan los parámetros `tabla` y `seccion`.
+ * 4. Se obtiene la lista de registros de la tabla desde la base de datos.
+ * 5. Se genera una tabla con los registros, incluyendo enlaces para editar y eliminar.
+
+* Verificar si el usuario está autenticado.
+ * Si no lo está, redirigir al login.
+
+* Verificar si se han proporcionado los parámetros necesarios:
+ * - tabla: nombre de la tabla.
+ * - seccion: sección actual.

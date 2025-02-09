@@ -1,0 +1,10 @@
+* Panel de Administración.
+ * 
+ * Este script verifica si el usuario está autenticado y carga el panel de administración.
+ * 
+ * Proceso:
+ * 1. Se inicia la sesión del usuario.
+ * 2. Se verifica si el usuario está autenticado.
+ * 3. Si no está autenticado, se redirige a la página de inicio de sesión.
+ * 4. Se incluye la conexión a la base de datos.
+ * 5. Se carga el header y el footer dinámico.

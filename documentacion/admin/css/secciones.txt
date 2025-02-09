@@ -1,0 +1,55 @@
+=======================================
+   CONTENEDOR PRINCIPAL DE CADA SECCIÓN
+   =======================================
+
+Centrado
+
+=======================================
+   AJUSTAR CONTENIDO PARA RESPETAR EL SIDEBAR A LA DERECHA
+   =======================================
+
+✅ Espacio para el sidebar
+
+=======================================
+   TÍTULOS DE SECCIÓN
+   =======================================
+
+=======================================
+   MENSAJES DE CONFIRMACIÓN Y ERROR
+   =======================================
+
+Mensajes de éxito
+
+Mensajes de error
+
+=======================================
+   BOTÓN "CREAR NUEVO REGISTRO"
+   =======================================
+
+Efecto hover en el botón
+
+=======================================
+   TABLA DE REGISTROS MEJORADA
+   =======================================
+
+✅ Encabezados de la tabla
+
+✅ Cuerpo de la tabla
+
+✅ ID en negrita y centrado
+
+✅ Alternar color de filas
+
+=======================================
+   BOTONES DE ACCIÓN
+   =======================================
+
+✅ Botón Editar
+
+✅ Botón Eliminar
+
+✅ Hover en los botones
+
+=======================================
+   RESPONSIVE PARA MÓVILES
+   =======================================

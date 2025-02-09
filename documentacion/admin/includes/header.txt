@@ -1,0 +1,11 @@
+* Generación dinámica del menú de navegación (sidebar).
+ * 
+ * Este script obtiene las secciones del menú desde la base de datos y las muestra en la barra lateral.
+ * 
+ * Proceso:
+ * 1. Define la URL base dinámica.
+ * 2. Determina la ruta del archivo de conexión a la base de datos (`db_connect.php`).
+ * 3. Verifica la existencia del archivo antes de incluirlo.
+ * 4. Verifica si la variable `$conexion` está definida tras la inclusión.
+ * 5. Consulta la base de datos para obtener las secciones del menú.
+ * 6. Genera la estructura del menú con enlaces dinámicos.

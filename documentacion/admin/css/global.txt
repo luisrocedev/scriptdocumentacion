@@ -1,0 +1,67 @@
+=======================================
+   RESET GENERAL
+   =======================================
+
+=======================================
+   PALETA DE COLORES (Variables CSS)
+   =======================================
+
+Azul oscuro
+
+Azul más claro
+
+Gris claro
+
+Negro suave
+
+Verde éxito
+
+Rojo error
+
+Hover más oscuro
+
+Azul botones
+
+=======================================
+   ESTILOS GENERALES DEL BODY
+   =======================================
+
+=======================================
+   CONTENEDOR PRINCIPAL
+   =======================================
+
+Para evitar que se solape con el sidebar
+
+=======================================
+   CONTENEDOR DEL DASHBOARD
+   =======================================
+
+=======================================
+   ESTILOS DEL TÍTULO DEL DASHBOARD
+   =======================================
+
+=======================================
+   ESTILO DEL TEXTO INFORMATIVO
+   =======================================
+
+=======================================
+   BOTONES GENERALES
+   =======================================
+
+Botón primario
+
+Botón de éxito
+
+Botón de peligro
+
+=======================================
+   MENSAJES DE ÉXITO Y ERROR
+   =======================================
+
+Mensajes de éxito
+
+Mensajes de error
+
+=======================================
+   RESPONSIVE (MÓVILES)
+   =======================================
