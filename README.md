@@ -1,98 +1,119 @@
-# 📄 Proyecto de Documentación - Generador de Docstrings en PHP
+# 📖 Generador de Documentación desde Docstrings
 
-## 📌 Descripción del Proyecto
+Este script permite extraer automáticamente los **docstrings** de archivos **PHP y CSS** dentro de una carpeta de un proyecto y genera archivos `.txt` con la documentación correspondiente.
 
-Este script permite **generar y visualizar documentación automáticamente** a partir del código fuente de un proyecto PHP.  
-
-Está diseñado para **extraer docstrings de los archivos PHP**, organizarlos en archivos `.txt` dentro de la carpeta `documentacion/` y mostrarlos en una **interfaz web navegable**.  
-
-Actualmente, **documenta el proyecto DarkOrange**, pero está **pensado para funcionar con cualquier otro proyecto PHP** con docstrings estructurados.
+> 🛑 **IMPORTANTE**: El script **solo funciona** si el código PHP y CSS está correctamente documentado con **docstrings** en los formatos adecuados (`/** ... */` en PHP y `/* ... */` en CSS).
 
 ---
 
-## 🏗️ Estructura del Proyecto
+## 🚀 **Cómo Usarlo**
+### **1️⃣ Configurar la ruta del proyecto**
+Para que el script funcione en tu proyecto, **solo debes cambiar la ruta de la carpeta donde se encuentra tu código**.
 
-📂 **documentacion/** → Carpeta donde se generan los archivos `.txt` con la documentación.  
-  - 📂 `admin/` → Documentación de los archivos del panel de administración.  
-  - 📂 `backend/` → Documentación de archivos del backend.  
+📌 **Abre el archivo `generador.php` y busca esta línea:**
+```php
+$sourceFolder = '/ruta/a/tu/proyecto';
+```
+🔹 **Ejemplo:** Si tu código está en la carpeta `mi_proyecto`, cambia la línea a:
+```php
+$sourceFolder = '/var/www/mi_proyecto';
+```
 
-📂 **includes/** → Archivos auxiliares de la interfaz.  
-  - `functions.php` → Funciones para manejar la documentación.  
-  - `navigation.php` → Control de navegación entre los archivos documentados.  
-
-📜 **index.php** → Interfaz web para visualizar y navegar por la documentación generada.  
-📜 **generador.php** → Script encargado de extraer los docstrings y generar los archivos `.txt`.  
-📜 **scripts.js** → Código JavaScript para mejorar la interacción en la interfaz.  
-📜 **style.css** → Estilos CSS personalizados para la visualización de la documentación.  
-
----
-
-## 🔧 Tecnologías Utilizadas
-
-✅ **Backend:** PHP puro (sin frameworks).  
-✅ **Frontend:** HTML, CSS, JavaScript.  
-✅ **Almacenamiento:** Archivos `.txt` en la carpeta `documentacion/`.  
-✅ **Entorno:** Puede ejecutarse en un servidor local o remoto con soporte PHP.  
+📌 **También debes definir la carpeta donde se guardará la documentación:**
+```php
+$targetFolder = '/ruta/donde/se/guardara/la/documentacion';
+```
+🔹 **Ejemplo:** 
+```php
+$targetFolder = '/var/www/documentacion';
+```
 
 ---
 
-## ⚙️ Funcionamiento del Proyecto
+## 🛠 **Cómo Ejecutarlo**
+Una vez configuradas las rutas, simplemente ejecuta el script desde la terminal o en tu navegador en **localhost**:
 
-1️⃣ **Extracción de Docstrings:**  
-   - `generador.php` analiza los archivos PHP dentro del proyecto seleccionado.  
-   - Busca **docstrings** en los comentarios de los archivos PHP (`/** ... */` y `// ...`).  
+### **Desde la terminal:**
+```sh
+php generador.php
+```
+### **Desde el navegador (localhost):**
+Abre `generador.php` en tu navegador.
 
-2️⃣ **Generación de Documentación:**  
-   - Extrae los docstrings y los guarda como **archivos `.txt`** dentro de `documentacion/`.  
-   - La estructura de `documentacion/` respeta la organización del proyecto original.  
-
-3️⃣ **Interfaz Web (`index.php`)**  
-   - Permite visualizar y navegar entre los archivos documentados de manera clara.  
-   - Usa **HTML, CSS y JavaScript** para una mejor experiencia de usuario.  
+El script recorrerá todos los archivos **PHP y CSS** en la carpeta del proyecto y generará archivos `.txt` con la documentación extraída.
 
 ---
 
-## 📡 APIs y Automatización
+## 📌 **Formato de Docstrings Soportado**
+El script **extrae docstrings** solo si están en el formato correcto:
 
-Este script **automatiza la documentación** de cualquier proyecto PHP sin modificar su código original.  
-Algunas características incluyen:  
-
-- **Generación dinámica de archivos** → `generador.php` extrae docstrings y crea `.txt` organizados.  
-- **Interfaz navegable** → `index.php` permite recorrer la documentación sin salir del navegador.  
-- **Compatibilidad con cualquier proyecto PHP** → Solo necesitas modificar la ruta de los archivos a documentar.  
-
-Ejemplo de un **docstring en PHP** reconocido por el script:  
-
+✅ **PHP (Docstrings en formato `/** ... */`)**
 ```php
 /**
- * Conecta a la base de datos MySQL.
- * 
- * @return mysqli Conexión activa a la base de datos.
+ * Esta función suma dos números y devuelve el resultado.
  */
-function conectarBD() {
-    // Código de conexión...
+function sumar($a, $b) {
+    return $a + $b;
 }
 ```
-## 🔗 Integración con DarkOrange y Otros Proyectos
 
-Actualmente, este script **documenta el código de DarkOrange**, pero está diseñado para funcionar con **cualquier otro proyecto PHP** con docstrings.
-
-- 🔹 **Documenta DarkOrange automáticamente** y permite visualizar la documentación desde un navegador.  
-- 🔹 **Fácilmente adaptable a otros proyectos** cambiando la ruta de los archivos a analizar.  
-- 🔹 **No modifica el código original**, solo extrae información de los docstrings.  
-
----
-
-## 📜 Documentación del Proyecto
-
-Si deseas ver la documentación completa del código, puedes:
-
-- **Revisar el código fuente en el repositorio de scriptdocumentacion**, donde cada archivo está comentado para facilitar su comprensión.  
-
-📌 **Repositorio del script:** [https://github.com/luisrocedev/scriptdocumentacion](https://github.com/luisrocedev/scriptdocumentacion)  
+✅ **CSS (Comentarios en formato `/* ... */`)**
+```css
+/* Estilo del botón principal */
+.button {
+    background-color: blue;
+    color: white;
+}
+```
 
 ---
 
-## 👨‍💻 Contacto
+## 📂 **Salida del Script**
+Cada archivo documentado generará un `.txt` en la carpeta de documentación.
 
-Si tienes preguntas o sugerencias, ¡contáctame en **LinkedIn** o revisa mi **GitHub**! 🚀
+🔹 **Ejemplo de estructura generada:**
+```
+documentacion/
+│── mi_archivo.php.txt
+│── estilos.css.txt
+│── subcarpeta/
+│   ├── otro_archivo.php.txt
+│   └── mas_estilos.css.txt
+```
+Cada `.txt` contendrá **únicamente los docstrings extraídos** del archivo correspondiente.
+
+---
+
+## 🔥 **Beneficios**
+✅ Automatiza la generación de documentación sin esfuerzo.  
+✅ Compatible con cualquier proyecto PHP y CSS documentado correctamente.  
+✅ Organiza la documentación en una estructura clara.  
+✅ Facilita la revisión de código y mantenimiento del proyecto.  
+
+---
+
+## 🎯 **¿Tienes Problemas?**
+Si el script **no genera documentación**, revisa lo siguiente:
+
+1️⃣ **Asegúrate de que los archivos PHP y CSS contienen docstrings** en los formatos soportados.  
+2️⃣ **Verifica que la ruta de la carpeta del proyecto es correcta** en `process.php`.  
+3️⃣ **Revisa los permisos de la carpeta de destino** (`chmod 777` puede ser necesario en algunos casos).  
+4️⃣ **Ejecuta el script desde la terminal** y revisa los errores de salida.  
+
+---
+
+## 🚀 **Conclusión**
+Este script es una herramienta poderosa para **automatizar la generación de documentación** en proyectos PHP y CSS.  
+Si tienes un código bien documentado, este script hará el trabajo por ti **sin esfuerzo**. 💡🔥  
+
+📌 **¡Ahora solo configúralo y genera tu documentación en segundos!** 😃🚀  
+
+---
+
+## 📩 **Contacto**
+Si tienes dudas, sugerencias o quieres mejorar este script, puedes ponerte en contacto conmigo a través de:
+
+🔹 **GitHub:** [luisrocedev](https://github.com/luisrocedev)  
+🔹 **LinkedIn:** [Luis Rodriguez](https://www.linkedin.com/in/luisrocedev/)  
+
+🚀 **¡Gracias por usar este script!** 🎉
