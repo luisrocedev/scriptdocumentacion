@@ -96,7 +96,7 @@ Cada `.txt` contendrá **únicamente los docstrings extraídos** del archivo cor
 Si el script **no genera documentación**, revisa lo siguiente:
 
 1️⃣ **Asegúrate de que los archivos PHP y CSS contienen docstrings** en los formatos soportados.  
-2️⃣ **Verifica que la ruta de la carpeta del proyecto es correcta** en `process.php`.  
+2️⃣ **Verifica que la ruta de la carpeta del proyecto es correcta** en `generador.php`.  
 3️⃣ **Revisa los permisos de la carpeta de destino** (`chmod 777` puede ser necesario en algunos casos).  
 4️⃣ **Ejecuta el script desde la terminal** y revisa los errores de salida.  
 
