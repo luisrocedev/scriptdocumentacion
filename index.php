@@ -15,10 +15,9 @@
         <h1>Documentación</h1> <!-- Título principal -->
         <h2>Índice</h2> <!-- Subtítulo -->
 
-        <ul class="toc">
+        <ul class="toc"> <!-- Lista de archivos de documentación -->
             <?php
-            $baseDir = 'documentacion'; // Ajustado para que coincida con el script
-
+            $baseDir = 'documentacion';         // Ajustado para que coincida con el script
             // Verificar si el archivo de navegación existe antes de incluirlo
             if (file_exists('includes/navigation.php')) {
                 require_once 'includes/navigation.php';

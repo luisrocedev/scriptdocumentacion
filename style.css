@@ -1,124 +1,172 @@
-/* General styling */
+/* ========================================================= */
+/* ESTILOS GENERALES */
+/* ========================================================= */
+
+/* Define la tipografía, márgenes y ajustes generales del cuerpo */
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    height: 100vh;
-    overflow: hidden; /* Evita desplazamientos en el contenedor general */
+    font-family: 'Arial', sans-serif; /* Fuente principal */
+    margin: 0; /* Elimina los márgenes predeterminados */
+    padding: 0; /* Elimina el padding predeterminado */
+    display: flex; /* Permite dividir la pantalla en sidebar y contenido */
+    height: 100vh; /* Asegura que ocupa toda la altura de la ventana */
+    overflow: hidden; /* Evita que el contenido desborde */
 }
 
+/* ========================================================= */
+/* ENCABEZADOS */
+/* ========================================================= */
+
+/* Estilos para el título principal */
 h1 {
-    text-align: center;
-    margin: 0;
-    padding: 1rem;
-    background-color: #84ff00;
-    color: white;
+    text-align: center; /* Centra el texto */
+    margin: 0; /* Elimina márgenes predeterminados */
+    padding: 1rem; /* Añade espacio alrededor del texto */
+    background-color: #84ff00; /* Fondo verde */
+    color: white; /* Texto en color blanco */
 }
 
+/* ========================================================= */
+/* BARRA LATERAL (SIDEBAR) */
+/* ========================================================= */
+
+/* Contenedor de la barra lateral */
 .sidebar {
-    width: 25%;
-    background-color: #f8f9fa;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    height: 100vh; /* Altura completa de la barra lateral */
-    overflow: hidden; /* Control de scroll solo en la lista */
+    width: 25%; /* Ocupa el 25% del ancho total */
+    background-color: #f8f9fa; /* Fondo gris claro */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra en el borde derecho */
+    display: flex; /* Organización en columna */
+    flex-direction: column; /* Elementos apilados verticalmente */
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    overflow: hidden; /* Evita desplazamientos dentro de la barra */
 }
 
+/* Estilos para el subtítulo en la barra lateral */
 .sidebar h2 {
-    padding: 1rem;
-    background-color: #e9ecef;
-    margin: 0;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    color: #495057;
+    padding: 1rem; /* Espaciado interno */
+    background-color: #e9ecef; /* Fondo gris claro */
+    margin: 0; /* Elimina márgenes predeterminados */
+    font-size: 1.2rem; /* Tamaño del texto */
+    text-transform: uppercase; /* Convierte texto a mayúsculas */
+    color: #495057; /* Color de texto gris oscuro */
 }
 
-/* Estilo para el índice con scroll */
+/* ========================================================= */
+/* ÍNDICE DE DOCUMENTACIÓN */
+/* ========================================================= */
+
+/* Lista de elementos del índice */
 .toc {
-    list-style-type: none;
-    padding: 1rem;
-    margin: 0;
-    overflow-y: auto; /* Habilitar desplazamiento vertical para la lista */
-    height: calc(100vh - 140px); /* Altura dinámica para incluir encabezados */
+    list-style-type: none; /* Elimina los estilos de lista */
+    padding: 1rem; /* Espaciado interno */
+    margin: 0; /* Elimina márgenes */
+    overflow-y: auto; /* Permite desplazamiento vertical si hay muchos elementos */
+    height: calc(100vh - 140px); /* Ajusta la altura disponible debajo del título */
 }
 
+/* Elementos individuales del índice */
 .toc li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.5rem; /* Espacio entre elementos */
 }
 
+/* Enlaces dentro del índice */
 .toc li a {
-    text-decoration: none;
-    color: #007BFF;
-    padding: 0.5rem;
-    display: block;
-    border-radius: 4px;
-    transition: background-color 0.3s;
+    text-decoration: none; /* Elimina el subrayado */
+    color: #007BFF; /* Azul intenso */
+    padding: 0.5rem; /* Espaciado interno */
+    display: block; /* Ocupa toda la línea */
+    border-radius: 4px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Efecto de cambio de color */
 }
 
+/* Cambio de color al pasar el mouse */
 .toc li a:hover {
-    background-color: #e9ecef;
+    background-color: #e9ecef; /* Fondo gris claro */
 }
 
+/* ========================================================= */
+/* SECCIÓN PRINCIPAL DE CONTENIDO */
+/* ========================================================= */
+
+/* Contenedor principal donde se muestra la documentación */
 .content {
-    width: 75%;
-    padding: 2rem;
-    overflow-y: auto; /* Permitir scroll en la sección principal si el contenido es extenso */
-    background-color: #ffffff;
+    width: 75%; /* Ocupa el 75% del ancho total */
+    padding: 2rem; /* Espaciado interno */
+    overflow-y: auto; /* Permite desplazamiento si el contenido es largo */
+    background-color: #ffffff; /* Fondo blanco */
 }
 
+/* ========================================================= */
+/* ESTILOS PARA BLOQUES DE CÓDIGO */
+/* ========================================================= */
+
+/* Contenedor de código con formato */
 pre {
-    font-family: 'Courier New', monospace;
-    background-color: #f1f1f1;
-    padding: 1rem;
-    border-radius: 8px;
-    border: 1px solid #dee2e6;
-    overflow-x: auto; /* Permitir desplazamiento horizontal para el contenido de código */
-    white-space: pre-wrap; /* Ajustar contenido para no exceder el contenedor */
+    font-family: 'Courier New', monospace; /* Fuente monoespaciada */
+    background-color: #f1f1f1; /* Fondo gris claro */
+    padding: 1rem; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    border: 1px solid #dee2e6; /* Borde gris claro */
+    overflow-x: auto; /* Permite desplazamiento horizontal */
+    white-space: pre-wrap; /* Ajusta el contenido para no desbordar */
 }
 
+/* ========================================================= */
+/* MENSAJES DE ESTADO */
+/* ========================================================= */
+
+/* Mensaje de carga */
 .loading {
-    color: #6c757d;
-    font-size: 1.1rem;
-    text-align: center;
+    color: #6c757d; /* Texto gris */
+    font-size: 1.1rem; /* Tamaño de fuente */
+    text-align: center; /* Texto centrado */
 }
 
+/* Mensaje de error */
 .error {
-    color: red;
-    font-size: 1.1rem;
-    text-align: center;
+    color: red; /* Texto en rojo */
+    font-size: 1.1rem; /* Tamaño de fuente */
+    text-align: center; /* Texto centrado */
 }
 
-/* Animación de deslizamiento */
+/* ========================================================= */
+/* ANIMACIÓN PARA EXPANDIR/CERRAR CARPETAS */
+/* ========================================================= */
+
+/* Lista de carpetas anidadas */
 .nested {
-    list-style: none;
-    padding-left: 20px;
-    margin: 0;
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.3s ease-out;
+    list-style: none; /* Elimina el estilo de lista */
+    padding-left: 20px; /* Espaciado a la izquierda */
+    margin: 0; /* Elimina márgenes */
+    overflow: hidden; /* Evita que se muestren los elementos hasta que se expanda */
+    max-height: 0; /* Altura inicial de 0 (cerrado) */
+    transition: max-height 0.3s ease-out; /* Animación de cierre */
 }
 
+/* Cuando una carpeta está abierta */
 .nested.open {
-    max-height: 500px;
-    /* Lo suficientemente grande para contener el contenido */
-    transition: max-height 0.3s ease-in;
+    max-height: 500px; /* Permite expandir el contenido */
+    transition: max-height 0.3s ease-in; /* Animación de apertura */
 }
 
+/* ========================================================= */
+/* ESTILOS PARA CARPETAS INTERACTIVAS */
+/* ========================================================= */
+
+/* Elementos de carpeta interactivos */
 .folder {
-    cursor: pointer;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
+    cursor: pointer; /* Indica que es un elemento interactivo */
+    font-weight: bold; /* Texto en negrita */
+    display: flex; /* Usa flexbox para alinear el ícono y el texto */
+    align-items: center; /* Centra verticalmente */
 }
 
+/* Ícono de carpeta cerrada */
 .folder::before {
-    content: '📁';
-    margin-right: 5px;
+    content: '📁'; /* Icono de carpeta cerrada */
+    margin-right: 5px; /* Espaciado entre el icono y el texto */
 }
 
+/* Ícono de carpeta abierta */
 .folder.open::before {
-    content: '📂';
-    /* Cambia el icono al abrir */
+    content: '📂'; /* Cambia el icono cuando se expande */
 }
