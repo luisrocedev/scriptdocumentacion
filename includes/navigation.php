@@ -12,46 +12,31 @@
  */
 function generateNavigation($baseDir)
 {
-    $html = ""; // Inicializa la variable donde se almacenará el HTML del índice
-    $items = scandir($baseDir); // Obtiene todos los elementos dentro de la carpeta base
-
-    // ====================================================
-    // RECORRIDO DE ELEMENTOS EN LA CARPETA
-    // ====================================================
+    $html = "";
+    $items = scandir($baseDir);
 
     foreach ($items as $item) {
         if ($item === '.' || $item === '..') {
-            continue; // Ignora los directorios especiales "." y ".."
+            continue;
         }
 
-        $sourcePath = $baseDir . DIRECTORY_SEPARATOR . $item; // Construye la ruta completa del elemento
-
-        // ====================================================
-        // MANEJO DE CARPETAS
-        // ====================================================
+        $sourcePath = $baseDir . DIRECTORY_SEPARATOR . $item;
 
         if (is_dir($sourcePath)) {
-            // Si es una carpeta, crea un elemento <li> con la opción de expandir/cerrar
-            $html .= "<li><div class='folder' onclick='toggleFolder(event)'>$item</div>";
-            $html .= "<ul class='nested'>"; // Lista anidada para los archivos dentro de la carpeta
-            $html .= generateNavigation($sourcePath); // Llamada recursiva para procesar la subcarpeta
-            $html .= "</ul></li>"; // Cierra la lista anidada
-        }
-
-        // ====================================================
-        // MANEJO DE ARCHIVOS
-        // ====================================================
-
-        else if (is_file($sourcePath) && pathinfo($item, PATHINFO_EXTENSION) === 'txt') {
-            // Si es un archivo de documentación (.txt), crea un enlace en el índice
-
-            $fileNameWithoutExtension = pathinfo($item, PATHINFO_FILENAME); // Obtiene el nombre del archivo sin extensión
-            $publicPath = str_replace(DIRECTORY_SEPARATOR, '/', $sourcePath); // Convierte rutas para compatibilidad web
-
-            // Crea un enlace que carga el archivo en la sección de contenido usando AJAX
+            // Añadir un span con la clase 'folder-icon' para mostrar el icono 🔼/🔽
+            $html .= "<li><div class='folder' onclick='toggleFolder(event)'>
+                        <span class='folder-icon'>🔽</span> $item
+                      </div>";
+            $html .= "<ul class='nested'>";
+            $html .= generateNavigation($sourcePath);
+            $html .= "</ul></li>";
+        } else if (is_file($sourcePath) && pathinfo($item, PATHINFO_EXTENSION) === 'txt') {
+            // Generar enlaces a los archivos de documentación
+            $fileNameWithoutExtension = pathinfo($item, PATHINFO_FILENAME);
+            $publicPath = str_replace(DIRECTORY_SEPARATOR, '/', $sourcePath);
             $html .= "<li><a href='#' onclick=\"loadFile('$publicPath'); return false;\">$fileNameWithoutExtension</a></li>";
         }
     }
 
-    return $html; // Devuelve el HTML generado
+    return $html;
 }

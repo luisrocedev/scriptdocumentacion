@@ -4,47 +4,70 @@
 
 /**
  * Maneja la expansión o contracción de carpetas en el índice de navegación.
- * Al hacer clic en una carpeta, alterna su estado (abierto o cerrado).
+ * Cambia el icono 🔽 (cerrado) y 🔼 (abierto) dinámicamente.
  */
 function toggleFolder(event) {
-    const folder = event.currentTarget; // Obtiene el elemento que disparó el evento
-    const nestedList = folder.nextElementSibling; // Obtiene la lista anidada de la carpeta
+    const folder = event.currentTarget; // Elemento clicado
+    const nestedList = folder.nextElementSibling; // Lista de archivos dentro de la carpeta
+    const icon = folder.querySelector('.folder-icon'); // Icono 🔼/🔽 dentro de la carpeta
 
     if (nestedList.classList.contains('open')) {
-        nestedList.classList.remove('open'); // Contrae la carpeta si ya está abierta
+        nestedList.classList.remove('open'); // Contraer carpeta
+        icon.textContent = '🔽'; // Cambiar icono a cerrado
     } else {
-        nestedList.classList.add('open'); // Expande la carpeta si está cerrada
+        nestedList.classList.add('open'); // Expandir carpeta
+        icon.textContent = '🔼'; // Cambiar icono a abierto
     }
 }
 
+
 // =============================================
-// FUNCIÓN PARA CARGAR EL CONTENIDO DE UN ARCHIVO CON AJAX
+// FUNCIÓN PARA CARGAR EL CONTENIDO DE UN ARCHIVO CON AJAX (LAZY LOADING)
 // =============================================
 
 /**
  * Carga el contenido de un archivo mediante AJAX y lo muestra en la página.
- * 
- * @param {string} filePath - Ruta del archivo a cargar.
  */
 function loadFile(filePath) {
-    const contentDiv = document.getElementById('content'); // Obtiene el contenedor donde se mostrará el contenido
-
-    // Muestra un mensaje de carga mientras se obtiene el archivo
+    const contentDiv = document.getElementById('content');
+    
+    // Si el contenido ya está cargado, evitar recarga innecesaria
+    if (contentDiv.getAttribute('data-loaded') === filePath) return;
+    
     contentDiv.innerHTML = '<p class="loading">Cargando contenido...</p>';
+    contentDiv.setAttribute('data-loaded', filePath); // Guardar el archivo cargado
 
-    // Realiza la petición AJAX usando Fetch API
     fetch(filePath)
         .then(response => {
-            // Verifica si la respuesta es válida (código HTTP 200-299)
             if (!response.ok) throw new Error(`Error al cargar el archivo: ${response.status}`);
-            return response.text(); // Convierte la respuesta en texto
+            return response.text();
         })
         .then(data => {
-            // Muestra el contenido del archivo dentro de un elemento <pre> para mantener el formato
             contentDiv.innerHTML = `<pre>${data}</pre>`;
         })
         .catch(error => {
-            // Muestra un mensaje de error si la carga falla
             contentDiv.innerHTML = `<p class="error">Error al cargar el archivo: ${error.message}</p>`;
         });
 }
+
+// =============================================
+// FUNCIÓN PARA ACTIVAR/DESACTIVAR MODO OSCURO
+// =============================================
+
+document.getElementById('toggleTheme').addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+});
+
+// =============================================
+// FUNCIÓN PARA FILTRAR ARCHIVOS EN EL ÍNDICE
+// =============================================
+
+document.getElementById('searchDocs').addEventListener('keyup', function () {
+    let filter = this.value.toLowerCase();
+    let items = document.querySelectorAll('.toc li');
+
+    items.forEach(item => {
+        let text = item.textContent.toLowerCase();
+        item.style.display = text.includes(filter) ? '' : 'none';
+    });
+});
