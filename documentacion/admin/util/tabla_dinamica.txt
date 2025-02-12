@@ -1,4 +1,0 @@
-* Muestra una tabla dinámica con los registros de una tabla específica.
- * 
- * Esta función genera automáticamente una tabla HTML con los registros obtenidos de la base de datos.
- * También incluye opciones para editar y eliminar registros.

@@ -1,8 +1,0 @@
-* Configuración para mostrar errores en el entorno de desarrollo.
- * 
- * Este script habilita la visualización de errores, incluyendo:
- * - Errores generales (`display_errors`).
- * - Errores de arranque (`display_startup_errors`).
- * - Reporte de todos los errores (`error_reporting`).
- * 
- * ⚠️ NOTA: No habilitar esta configuración en producción, ya que podría exponer información sensible.

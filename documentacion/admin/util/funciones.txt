@@ -1,3 +1,0 @@
-* Obtiene la estructura de una tabla en la base de datos.
-
-* Genera un formulario dinámico basado en la estructura de la tabla.

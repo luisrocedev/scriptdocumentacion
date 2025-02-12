@@ -1,8 +1,0 @@
-* Configuración de la conexión a la base de datos.
- * 
- * Este script establece la conexión con la base de datos MySQL para el proyecto.
- * 
- * Proceso:
- * 1. Define los parámetros de conexión (servidor, usuario, contraseña, base de datos).
- * 2. Crea una conexión con la base de datos utilizando `mysqli`.
- * 3. Verifica si la conexión fue exitosa o muestra un mensaje de error.

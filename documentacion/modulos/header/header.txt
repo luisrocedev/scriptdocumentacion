@@ -1,0 +1,3 @@
+========== ESTILOS PARA HEADER MINIMALISTA MEJORADO ==========
+
+Ajuste para evitar que el contenido quede debajo del header
