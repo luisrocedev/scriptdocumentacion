@@ -1,0 +1,13 @@
+========== DASHBOARD CSS ==========
+
+🛠️ Ajuste del contenedor principal
+
+Respetar el espacio del sidebar
+
+📦 Estilo del dashboard
+
+🖍️ Títulos
+
+🌐 Responsividad
+
+✨ Animación de aparición

@@ -1,0 +1,4 @@
+* Carga la lógica necesaria para una sección específica.
+ * 
+ * Esta función verifica la sesión del usuario, establece la conexión con la base de datos 
+ * y obtiene los registros de la tabla correspondiente.

@@ -1,0 +1,47 @@
+======= ⚙️ GLOBAL CSS - DarkOrange Admin Panel =======
+
+======= 🌈 VARIABLES DE COLOR =======
+
+darkorange
+
+azul oscuro
+
+gris suave
+
+texto principal
+
+hover oscuro
+
+botón principal
+
+verde éxito
+
+rojo error
+
+azul info
+
+amarillo advertencia
+
+bordes suaves
+
+======= 🔄 RESET GENERAL =======
+
+======= 🖼️ ESTRUCTURA GENERAL =======
+
+======= 📝 TEXTOS =======
+
+======= 🔘 BOTONES GENERALES =======
+
+Botones secundarios
+
+======= 🛠️ FORMULARIOS =======
+
+======= 🗂️ TABLAS =======
+
+======= ⚠️ MENSAJES DE ALERTA =======
+
+======= 🎯 UTILIDADES =======
+
+======= 📱 RESPONSIVIDAD =======
+
+======= 🌟 ANIMACIONES =======

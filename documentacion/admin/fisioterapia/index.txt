@@ -1,0 +1,7 @@
+* Cargar la lógica específica para la sección "fisioterapia".
+ * La función `cargarLogica` devuelve un array con:
+ * - $conexion: conexión a la base de datos.
+ * - $tabla: nombre de la tabla asociada.
+ * - $seccion: nombre de la sección actual.
+ * - $message: mensaje de confirmación o error, si existe.
+ * - $registros: array con los registros de la base de datos.

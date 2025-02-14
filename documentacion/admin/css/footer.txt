@@ -1,0 +1,5 @@
+========== 🌐 FOOTER CSS - Panel de Administración ==========
+
+Igual al ancho del sidebar
+
+📱 Responsividad

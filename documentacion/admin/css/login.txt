@@ -1,0 +1,19 @@
+======= ⚙️ ESTILOS LOGIN - DarkOrange Admin Panel =======
+
+======= 🌆 FONDO PRINCIPAL =======
+
+======= 🏛️ CONTENEDOR PRINCIPAL =======
+
+======= 🔶 LOGO SUPERIOR =======
+
+======= 🛠️ TITULO DE LOGIN =======
+
+======= 🔑 CAMPOS DE ENTRADA =======
+
+======= 🚀 BOTÓN DE INICIO DE SESIÓN =======
+
+======= ⚠️ MENSAJES DE ERROR =======
+
+======= 🎨 ANIMACIONES =======
+
+======= 📱 RESPONSIVIDAD =======

@@ -1,0 +1,6 @@
+* Generación dinámica del menú de navegación (sidebar).
+ * 
+ * Proceso:
+ * 1. Incluye la conexión a la base de datos.
+ * 2. Consulta las secciones del menú desde la tabla `admin_menu`.
+ * 3. Genera el menú lateral de forma dinámica.

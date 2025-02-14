@@ -161,7 +161,7 @@ function extractDocstring($filePath)
 // --------------------------------------------
 
 // Ruta de la carpeta donde se encuentra el código fuente
-$sourceFolder = '/Applications/MAMP/htdocs/GitHub/taronjaboxvalencia';
+$sourceFolder = '/Applications/MAMP/htdocs/GitHub/darkorange';
 
 // Ruta de la carpeta donde se guardará la documentación generada
 $targetFolder = '/Applications/MAMP/htdocs/GitHub/scriptdocumentacion/documentacion';

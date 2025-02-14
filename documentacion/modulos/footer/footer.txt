@@ -1,9 +1,0 @@
-========== ESTRUCTURA PARA QUE EL FOOTER SE QUEDE FIJO ABAJO ==========
-
-Empuja el footer hacia abajo
-
-========== ESTILOS DEL FOOTER ==========
-
-========== TEXTO DEL FOOTER ==========
-
-========== RESPONSIVE ==========

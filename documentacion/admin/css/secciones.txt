@@ -1,0 +1,43 @@
+=======================================
+   🌐 SECCIONES CSS - DarkOrange Admin Panel
+=======================================
+
+======= 🔄 RESET GLOBAL =======
+
+Restar altura del footer
+
+Respetar espacio del sidebar
+
+======= 📦 CONTENEDOR PRINCIPAL =======
+
+======= 🖍️ TITULOS Y TEXTOS =======
+
+======= ➕ BOTÓN "CREAR NUEVO REGISTRO" =======
+
+======= 🗂️ TABLA DE REGISTROS =======
+
+======= ⚙️ BOTONES DE ACCIÓN =======
+
+======= 🧩 AJUSTES DE FORMULARIO =======
+
+======= 🛑 SIN REGISTROS =======
+
+======= 📱 RESPONSIVIDAD =======
+
+======= 🌟 AJUSTES ESPECÍFICOS POR SECCIÓN =======
+
+👥 Quiénes Somos
+
+🛠️ Nuestro Equipo
+
+🩺 Fisioterapia
+
+💳 Planes de Suscripción
+
+📨 Contacto
+
+======= 💬 ESTILO DE SUBTÍTULOS =======
+
+Botón de eliminar personalizado
+
+======= 🌟 ANIMACIONES =======

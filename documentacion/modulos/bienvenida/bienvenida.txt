@@ -1,3 +1,0 @@
-========== ESTILOS PARA SECCIÓN DE BIENVENIDA ==========
-
-========== RESPONSIVE ==========
